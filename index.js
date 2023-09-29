@@ -14,9 +14,9 @@ const fileTypes = [
 input.addEventListener("change", updateImageDisplay);
 
 function updateImageDisplay() {
-    while (preview.firstChild) {
+    //while (preview.firstChild) {
       //preview.removeChild(preview.firstChild);
-    }
+    //}
   
     const curFiles = input.files;
     files = curFiles;
