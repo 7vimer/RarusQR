@@ -30,7 +30,7 @@ function updateImageDisplay() {
   
       for (const file of curFiles) {
         //const listItem = document.createElement("li");
-        const para = document.createElement("p");
+        //const para = document.createElement("p");
         if (validFileType(file)) {
           //para.textContent = `File name ${file.name}, file size ${returnFileSize(
            // file.size,
