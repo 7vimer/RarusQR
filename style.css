@@ -87,8 +87,6 @@ textarea::placeholder {
 }
 
 .blockFile {
-    background-color: var(--choice-color);
-    background: var(--choice-color);
     height: 80vh;
     margin: 2vh;
 }
@@ -97,11 +95,38 @@ textarea::placeholder {
     width: 100%;
     background-color: var(--push-button);
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 0;
     text-align: center;
     height: 3.4vh;
     border: 0;
     font-weight: 600;
     
+}
+
+.wrapIMG {
+    height: 110px;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapIMG img {
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    height: 110px;
+    position: relative;
+    width: 100%;
+}
+
+.wrap img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
 }
