@@ -15,7 +15,7 @@ input.addEventListener("change", updateImageDisplay);
 
 function updateImageDisplay() {
     while (preview.firstChild) {
-      preview.removeChild(preview.firstChild);
+      //preview.removeChild(preview.firstChild);
     }
   
     const curFiles = input.files;
