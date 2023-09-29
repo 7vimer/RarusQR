@@ -112,7 +112,6 @@ textarea::placeholder {
 }
 
 .wrapIMG img {
-    height: 100%;
     width: 100%;
 }
 
@@ -129,4 +128,31 @@ textarea::placeholder {
     top: 0;
     bottom: 0;
     cursor: pointer;
+}
+
+.blockPush {
+    height: 40vh;
+    margin: 2vh;
+}
+
+input {
+    padding: 1vh;
+    width: 100%;
+    height: 5vh;
+    resize: none;
+    font-size: 2.1vh;
+    outline: none;
+    border: 0;
+    padding-left: 2vw;
+    background-color: var(--choice-color);
+    color: var(--choice-name);
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: var(--choice-name);
+    font-weight: 600;
+    font-size: 2.1vh;
+    text-align: center;
 }
