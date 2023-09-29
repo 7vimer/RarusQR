@@ -2,9 +2,7 @@
 const input = document.getElementById("file-uploader");
 const preview = document.querySelector(".modal-body");
 var files;
-//input.style.opacity = 0;
-input.style.width = "0px";
-input.style.height = "0px";
+
 
 const fileTypes = [
     "image/jpeg",
@@ -26,29 +24,63 @@ function updateImageDisplay() {
       para.textContent = "No files currently selected for upload";
       preview.appendChild(para);
     } else {
-      const list = document.createElement("ol");
-      preview.appendChild(list);
+      //const list = document.createElement("ol");
+      //preview.appendChild(list);
   
       for (const file of curFiles) {
-        const listItem = document.createElement("li");
-        const para = document.createElement("p");
+        //const listItem = document.createElement("li");
+        //const para = document.createElement("p");
         if (validFileType(file)) {
           //para.textContent = `File name ${file.name}, file size ${returnFileSize(
            // file.size,
           //)}.`; Имя и размер файла
-          const image = document.createElement("img");
-          image.style.width = "40%";
+          
+          row = document.createElement("div");
+          row.classList.add("row");
+          row.style = "margin-bottom: 6px;";
 
-          image.src = URL.createObjectURL(file);
+          foo = document.createElement("div");
+          foo.classList.add("col-2");
+          row.appendChild(foo);
+
+          cendiv = document.createElement("div");
+          cendiv.classList.add("col-8");
+          row.appendChild(cendiv);
+
+          wrapDiv = document.createElement("div");
+          wrapDiv.classList.add("wrapIMG");
+          cendiv.appendChild(wrapDiv);
+          
+          img = document.createElement("img");
+          img.src = URL.createObjectURL(file);
+          wrapDiv.appendChild(img);
+
+          trashdiv = document.createElement("div");
+          trashdiv.classList.add("col-2");
+          row.appendChild(trashdiv);
+
+          wrapTrash = document.createElement("div");
+          wrapTrash.classList.add("wrap");
+          trashdiv.appendChild(wrapTrash);
+
+          trashimg = document.createElement("img");
+          trashimg.src = "image/trash.svg";
+          wrapTrash.appendChild(trashimg);
+
+          preview.appendChild(row);
+          //const image = document.createElement("img");
+          //image.style.width = "40%";
+
+          //image.src = URL.createObjectURL(file);
   
-          listItem.appendChild(image);
-          listItem.appendChild(para);
+          //listItem.appendChild(image);
+          //listItem.appendChild(para);
         } else {
           para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
           listItem.appendChild(para);
         }
   
-        list.appendChild(listItem);
+        //list.appendChild(listItem);
       }
     }
   }
