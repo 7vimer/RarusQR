@@ -95,7 +95,8 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <button class="pushButton">Отправить</button>
+                    <button type="button" data-bs-toggle="modal"
+                    data-bs-target="#pushApplication" class="pushButton">Отправить</button>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -107,7 +108,7 @@
         <div class="modal-dialog modal-dialog-centered"> 
             <div class="modal-content blockFile" style="background-color: #FFF3E1;">
                 <div class="row align-items-start" style="margin-top: 1vh; margin-left: 0.5vh; margin-right: 0.5vh;">
-                    <div class="col-4"><input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple></div>
+                    <input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple style="display: none;">
                     <div class="col-4"><label class="addButton" for="file-uploader">Добавить</label></div>
                     <div class="col-4 align-self-center text-center">
                         <h5 class="text-center" style="color: black; font-size: 2.0vh;">Файлы</h5>
@@ -152,6 +153,34 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="pushApplication" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content blockPush" style="background-color: #ffffff;  border-radius: 20px; border: 2px solid var(--push-button);">
+                <div class="row align-self-center text-center" style="margin-top: 1vh; margin-left: 0.5vh; margin-right: 0.5vh;">
+                    <div style="font-size: 2.1vh; font-weight: 600;">Вы можете оставить контакнтые данные, чтобы отслеживать состояние по Вашей заявке.</div>
+                </div>
+                <div class="modal-body">
+                    <div class="mt-3 bigMb">
+                        <input type="text" placeholder="ФИО" id="fullName">
+                    </div>
+                    <div class="mt-3 bigMb">
+                        <input type="text" placeholder="Телефон / email" id="PhoneEmail">
+                    </div>
+                    <div class="row px-1 mt-2 align-self-center">
+                        <div class="col-1"><img src="image/attention.svg" alt=""></div>
+                        <div class="col-11"><div>Данные поля необязательны</div></div>
+                    </div>
+                    <div class="mt-3 bigMb">
+                        <button class="pushButton" data-bs-dismiss="modal" aria-label="Закрыть">Готово</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="/index.js"></script>
 </body>
 
