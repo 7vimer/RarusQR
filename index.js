@@ -1,7 +1,11 @@
+
 const input = document.getElementById("file-uploader");
 const preview = document.querySelector(".modal-body");
-input.style.opacity = 0;
-console.log(input.style.opacity);
+var files;
+//input.style.opacity = 0;
+input.style.width = "0px";
+input.style.height = "0px";
+
 const fileTypes = [
     "image/jpeg",
     "image/jpg",
@@ -16,6 +20,7 @@ function updateImageDisplay() {
     }
   
     const curFiles = input.files;
+    files = curFiles;
     if (curFiles.length === 0) {
       const para = document.createElement("p");
       para.textContent = "No files currently selected for upload";
@@ -28,10 +33,12 @@ function updateImageDisplay() {
         const listItem = document.createElement("li");
         const para = document.createElement("p");
         if (validFileType(file)) {
-          para.textContent = `File name ${file.name}, file size ${returnFileSize(
-            file.size,
-          )}.`;
+          //para.textContent = `File name ${file.name}, file size ${returnFileSize(
+           // file.size,
+          //)}.`; Имя и размер файла
           const image = document.createElement("img");
+          image.style.width = "40%";
+
           image.src = URL.createObjectURL(file);
   
           listItem.appendChild(image);
