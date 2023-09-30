@@ -14,8 +14,20 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="px-3 mt-4 bigMb">
+
+    <div class="navlogo p-2" style="width: 100vw;">
+        <div class="row flex-nowrap justify-content-between align-items-center" style="width: 100vw;">
+            <div class="col-4 justify-content-start"><a href="#" class="col-4"><img class="logo"
+                        src="image/logo-rarus.svg" alt=""></a></div>
+            <div class="col-4 text-center">
+                <div class="text" id="namePage">Порядок в офисе</div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+    <div class="content p-0">
+        <div class="px-3 mt-4 bigMb mobile">
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10 text-center">
@@ -26,94 +38,104 @@
             </div>
         </div>
 
-        <div class="px-3 mt-4 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="d-flex bd-highligh choice">
-                        <div class="w-100 bd-highlight nameButton">
-                            <div class="inner">Здание</div>
+        <div class="content_main">
+            <div class="content_block">
+                <div class="navbarContent decstope">
+                    <div class="row">
+                        <div class="col-12 text-center" style="font-size: 2vh;">Заявка</div>
+                    </div>
+                </div>
+                <div class="content_box">
+                    <div class="px-3 mt-4 bigMb">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="d-flex bd-highligh choice">
+                                    <div class="w-100 bd-highlight nameButton">
+                                        <div class="inner">Здание</div>
+                                    </div>
+                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
+                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                            data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
                     </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
 
-        <div class="px-3 mt-3 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="d-flex bd-highligh choice">
-                        <div class="w-100 bd-highlight nameButton">
-                            <div class="inner">Помещение</div>
+                    <div class="px-3 mt-3 bigMb">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="d-flex bd-highligh choice">
+                                    <div class="w-100 bd-highlight nameButton">
+                                        <div class="inner">Помещение</div>
+                                    </div>
+                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
+                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                            data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
                     </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
 
-        <div class="px-3 mt-3 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="d-flex bd-highligh choice">
-                        <div class="w-100 bd-highlight nameButton">
-                            <div class="inner">Что необходимо сделать</div>
+                    <div class="px-3 mt-3 bigMb">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="d-flex bd-highligh choice">
+                                    <div class="w-100 bd-highlight nameButton">
+                                        <div class="inner">Что необходимо сделать</div>
+                                    </div>
+                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
+                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
                         </div>
-                        <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                            data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
                     </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
 
-        <div class="px-3 mt-3 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="blockDescription">
-                        <textarea id="textDescription" placeholder="Комментарий"></textarea>
+                    <div class="px-3 mt-3 bigMb">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="blockDescription">
+                                    <textarea id="textDescription" placeholder="Комментарий"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
                     </div>
+
+
+                    <div class="px-3 mt-3 bigMb">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-10">
+                                <div class="twoButton">
+                                    <button type="button" class="mb-3 addFileButton" data-bs-toggle="modal"
+                                        data-bs-target="#addFileButton">Добавить фото / видео</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#pushApplication"
+                                        class="pushButton">Отправить</button>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+
+
+
                 </div>
-                <div class="col-md-1"></div>
             </div>
         </div>
 
-        <div class="px-3 mt-3 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <button type="button" class="addFileButton" data-bs-toggle="modal"
-                        data-bs-target="#addFileButton">Добавить фото / видео</button>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-
-        <div class="px-3 mt-3 bigMb">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <button type="button" data-bs-toggle="modal"
-                    data-bs-target="#pushApplication" class="pushButton">Отправить</button>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
 
     </div>
 
     <div class="modal fade" id="addFileButton" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content blockFile" style="background-color: #FFF3E1; border-radius: 20px; border: 2px solid var(--push-button);">
+            <div class="modal-content blockFile"
+                style="background-color: #FFF3E1; border-radius: 20px; border: 2px solid var(--push-button);">
                 <div class="row align-items-start" style="margin-top: 1vh; margin-left: 0.5vh; margin-right: 0.5vh;">
                     <input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple style="display: none;">
                     <div class="col-4"><label class="addButton" for="file-uploader">Добавить</label></div>
@@ -124,7 +146,7 @@
                             data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
             </div>
         </div>
