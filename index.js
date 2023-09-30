@@ -7,15 +7,16 @@ var files;
 const fileTypes = [
     "image/jpeg",
     "image/jpg",
+    "image/pjpg",
     "video/mp4"
   ];
 
 input.addEventListener("change", updateImageDisplay);
 
 function updateImageDisplay() {
-    while (preview.firstChild) {
-      preview.removeChild(preview.firstChild);
-    }
+    //while (preview.firstChild) {
+      //preview.removeChild(preview.firstChild);
+    //}
   
     const curFiles = input.files;
     files = curFiles;
