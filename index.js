@@ -1,6 +1,5 @@
-
 const input = document.getElementById("file-uploader");
-const preview = document.querySelector(".content-list");
+const preview = document.querySelector(".listFile");
 const clue = document.getElementById("clue");
 var files;
 
@@ -81,7 +80,7 @@ function updateImageDisplay() {
             trashimg = document.createElement("img");
             trashimg.src = "image/trash.svg";
             trashimg.id = "_" + String(count);
-            trashimg.addEventListener("onclick", removeRow(id));
+            trashimg.setAttribute("onclick", "removeRow(id)");
             wrapTrash.appendChild(trashimg);
           }
           else{
@@ -165,11 +164,11 @@ function updateImageDisplay() {
 
   function checkCount(){
     count = preview.childElementCount;
-    if(preview.childElementCount != 1){
-      clue.style.display = "none";
+    if(files.length == 0){
+      document.querySelector('.outer').style.display = "block";
     }
     else{
-      clue.style.display = "";
+      document.querySelector('.outer').style.display = "none";
     }
     return count;
   }

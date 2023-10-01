@@ -49,13 +49,14 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                                <div class="d-flex bd-highligh choice">
-                                    <div class="w-100 bd-highlight nameButton">
-                                        <div class="inner">Здание</div>
-                                    </div>
-                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
-                                </div>
+                                <select id="room" name="room" class="form-select-choice choice" required="">
+                                    <option value="">Здание</option>
+                                    <option value="Институт №14">
+                                        Главное </option>
+                                    <option value="Институт №1">
+                                        Дополнительное </option>
+                                    <option value="Институт №2">
+                                </select>
                             </div>
                             <div class="col-md-1"></div>
                         </div>
@@ -65,13 +66,17 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                                <div class="d-flex bd-highligh choice">
-                                    <div class="w-100 bd-highlight nameButton">
-                                        <div class="inner">Помещение</div>
-                                    </div>
-                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
-                                </div>
+
+                                <select id="building" name="building" class="form-select-choice choice" required="">
+                                    <option value="">Помещение</option>
+                                    <option value="Институт №14">
+                                        Столовая </option>
+                                    <option value="Институт №1">
+                                        Переговорная </option>
+                                    <option value="Институт №2">
+                                </select>
+
+                                
                             </div>
                             <div class="col-md-1"></div>
                         </div>
@@ -81,13 +86,14 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                                <div class="d-flex bd-highligh choice">
-                                    <div class="w-100 bd-highlight nameButton">
-                                        <div class="inner">Что необходимо сделать</div>
-                                    </div>
-                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/choiseButton.svg" alt=""
-                                        data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
-                                </div>
+                                <select id="exercise" name="exercise" class="form-select-choice choice" required="">
+                                    <option value="">Что необходимо сделать</option>
+                                    <option value="Институт №14">
+                                        Убраться </option>
+                                    <option value="Институт №1">
+                                        Дать печенек </option>
+                                    <option value="Институт №2">
+                                </select>
                             </div>
                             <div class="col-md-1"></div>
                         </div>
@@ -180,7 +186,7 @@
                             <div class="col-1" style="width: 5%;"></div>
                             <div class="col-10" style="width: 90%;">
                                 <div class="content listFile">
-                                    <div class="decstope">
+                                    <div class="decstope outer" style="text-align: center;">
                                         <div class="clueFile">
                                             <img src="image/fileImg.svg" alt="">
                                             <p>Здесь будут отображаться добавленные файлы.4</p>
