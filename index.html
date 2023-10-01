@@ -49,7 +49,8 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-                                <select id="room" name="room" class="form-select-choice choice" required="">
+                                <label class="form-label visually-hidden" for="building">Здание</label>
+                                <select id="building" name="building" class="form-select-choice choice" required="">
                                     <option value="">Здание</option>
                                     <option value="Институт №14">
                                         Главное </option>
@@ -66,8 +67,8 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
-
-                                <select id="building" name="building" class="form-select-choice choice" required="">
+                                <label class="form-label visually-hidden" for="room">Помещение</label>
+                                <select id="room" name="room" class="form-select-choice choice" required="">
                                     <option value="">Помещение</option>
                                     <option value="Институт №14">
                                         Столовая </option>
@@ -86,6 +87,7 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-10">
+                                <label class="form-label visually-hidden" for="exercise">Задача</label>
                                 <select id="exercise" name="exercise" class="form-select-choice choice" required="">
                                     <option value="">Что необходимо сделать</option>
                                     <option value="Институт №14">
