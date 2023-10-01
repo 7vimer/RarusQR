@@ -146,6 +146,20 @@ textarea::placeholder {
     font-size: 1.8vh;
 }
 
+.readyButton {
+    width: 80%;
+    background-color: var(--push-button);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    text-align: center;
+    height: 5vh;
+    display: inline-block;
+    border: 0;
+    font-weight: 600;
+    font-size: 1.8vh;
+}
+
 .addFileButton {
     width: 45%;
     background: var(--transparent-button);
@@ -161,6 +175,130 @@ textarea::placeholder {
     margin-right: 15px;
 }
 
+input {
+    padding: 1vh;
+    width: 100%;
+    height: 6vh;
+    resize: none;
+    font-size: 2.1vh;
+    outline: none;
+    border: 0;
+    background-color: var(--choise-color-dec);
+    color: var(--choice-name);
+    font-weight: 600;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: var(--choice-name);
+    font-weight: 600;
+    font-size: 2.1vh;
+    text-align: center;
+}
+
+.blockFile {
+    width: 50vw;
+    max-width: 1140px;
+    background: #ffffff;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.addButton {
+    display: flex;
+    width: 100%;
+    background-color: var(--navbar-color);
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+    border: 0;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+
+.maxButton {
+    width: 30%;
+}
+
+.content-list {
+    margin-top: 10px;
+}
+
+.listFile {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    border: 2px solid var(--navbar-color);
+    text-align: center;
+}
+
+.addFileBlock {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: var(--choise-color-dec);
+    width: 95%;
+    height: 110px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.wrapIMG {
+    height: 110px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapIMG img {
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.nameFile {
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.textFile {
+    font-size: 1.9vh;
+    font-weight: 600;
+}
+
+.wrap {
+    height: 110px;
+    position: relative;
+    width: 100%;
+}
+
+.wrap img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.indentation {
+    width: 5%;
+}
+
+.content-file {
+    width: 90%;
+}
 
 @media screen and (max-width: 1050px) {
 
@@ -194,7 +332,7 @@ textarea::placeholder {
         justify-content: center;
         margin-top: 0;
     }
-    
+
     .content_block {
         width: 100%;
         background: #ffffff;
@@ -202,7 +340,7 @@ textarea::placeholder {
         position: fixed;
         overflow: hidden;
     }
-    
+
     .content_box {
         margin-bottom: none;
         margin-top: none;
@@ -302,9 +440,23 @@ textarea::placeholder {
         margin-left: 0%;
     }
 
+    .readyButton {
+        width: 100%;
+    }
+
+
     .blockFile {
+        width: 100%;
         height: 80vh;
-        margin: 2vh;
+        margin: 0;
+        background-color: #FFF3E1;
+    }
+
+    .listFile {
+        width: 100%;
+        height: 70vh;
+        border-radius: 0;
+        border: 0;
     }
 
     .addButton {

@@ -1,6 +1,6 @@
 
 const input = document.getElementById("file-uploader");
-const preview = document.querySelector(".modal-body");
+const preview = document.querySelector(".listFile");
 var files;
 
 

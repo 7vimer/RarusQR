@@ -37,7 +37,6 @@
                 <div class="col-md-1"></div>
             </div>
         </div>
-
         <div class="content_main">
             <div class="content_block">
                 <div class="navbarContent decstope">
@@ -121,32 +120,82 @@
                             <div class="col-md-1"></div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <div class="modal fade" id="addFileButton" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content blockFile"
-                style="background-color: #FFF3E1; border-radius: 20px; border: 2px solid var(--push-button);">
-                <div class="row align-items-start" style="margin-top: 1vh; margin-left: 0.5vh; margin-right: 0.5vh;">
-                    <input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple style="display: none;">
-                    <div class="col-4"><label class="addButton" for="file-uploader">Добавить</label></div>
-                    <div class="col-4 align-self-center text-center">
-                        <h5 class="text-center" style="color: black; font-size: 2.0vh;">Файлы</h5>
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content"
+                style="text-align: center; background-color: var( --transparent-button); border: 0;">
+                <div class="blockFile" style="overflow: hidden;">
+                    <div class="mobile">
+                        <div class="row align-items-start"
+                            style="margin-top: 1vh; margin-left: 0.5vh; margin-right: 0.5vh;">
+                            <input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple
+                                style="display: none;">
+                            <div class="col-4"><label class="addButton" for="file-uploader">Добавить</label></div>
+                            <div class="col-4 align-self-center text-center">
+                                <h5 class="text-center" style="color: black; font-size: 2.0vh;">Файлы</h5>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end"><button type="button" class="btn-close"
+                                    data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+                        </div>
                     </div>
-                    <div class="col-4 d-flex justify-content-end"><button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
-                </div>
-                <div class="modal-body">
+                    <div class="decstope">
+                        <div class="row align-items-start navbarContent" style="background-color: var(--navbar-color);">
+                            <div class="col-4"></div>
+                            <div class="col-4 align-self-center text-center">
+                                <h5 class="text-center" style="color: #ffffff; font-size: 2.0vh;">Добавление файлов</h5>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end" data-bs-theme="dark"><button type="button"
+                                    class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+                        </div>
 
+
+                        <div class="row">
+                            <div class="col-1" style="width: 5%;"></div>
+                            <div class="col-10" style="width: 90%;">
+
+                                <div class="d-flex bd-highligh">
+                                    <div class="w-100 bd-highlight">
+                                        <div class="maxButton">
+                                            <input type="file" accept=".jpg, .jpeg, .mp4" id="file-uploader" multiple
+                                                style="display: none;">
+                                            <label class="addButton" for="file-uploader">Загрузить файл</label>
+                                        </div>
+                                    </div>
+                                    <img class="p-2 flex-shrink-1 bd-highlight" src="image/clue.svg">
+                                </div>
+                            </div>
+                            <div class="col-1" style="width: 5%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="content-list">
+
+                        <div class="row" style="margin-top: 0;  margin-right: 0;">
+                            <div class="col-1" style="width: 5%;"></div>
+                            <div class="col-10" style="width: 90%;">
+                                <div class="content listFile">
+                                    <div class="decstope">
+                                        <div class="clueFile">
+                                            <img src="image/fileImg.svg" alt="">
+                                            <p>Здесь будут отображаться добавленные файлы.4</p>
+                                            <p>Поддерживаются следующие форматы: png, jpg, mp4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1" style="width: 5%;"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-body">
+                    </div>
                 </div>
             </div>
         </div>
@@ -175,8 +224,8 @@
                             <div>Данные поля необязательны</div>
                         </div>
                     </div>
-                    <div class="mt-3 bigMb">
-                        <button class="pushButton" data-bs-dismiss="modal" aria-label="Закрыть">Готово</button>
+                    <div class="mt-3 bigMb" style="text-align: center;">
+                        <button class="readyButton" data-bs-dismiss="modal" aria-label="Закрыть">Готово</button>
                     </div>
                 </div>
             </div>
