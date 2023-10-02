@@ -127,6 +127,7 @@ function updateImageDisplay() {
           para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
           listItem.appendChild(para);
         }
+        checkCount();
       }
     }
   }
