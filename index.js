@@ -1,8 +1,8 @@
 const input = document.getElementById("file-uploader");
 const preview = document.querySelector(".listFile");
 const clue = document.getElementById("clue");
-var files;
-
+var files = new Array();
+count = 0;
 
 const fileTypes = [
     "image/jpeg",
@@ -14,37 +14,29 @@ const fileTypes = [
 input.addEventListener("change", updateImageDisplay);
 
 function updateImageDisplay() {
-    //while (preview.firstChild) {
-      //preview.removeChild(preview.firstChild);
-    //}
-  
+    
     const curFiles = input.files;
-    files = curFiles;
     if (curFiles.length === 0) {
-      const para = document.createElement("p");
-      para.textContent = "No files currently selected for upload";
-      preview.appendChild(para);
+      //const para = document.createElement("p");
+      //para.textContent = "No files currently selected for upload";
+      //preview.appendChild(para);
     }
     else if (checkCount() == 6){
       return;  
     }
     else {
       
-      //const list = document.createElement("ol");
-      //preview.appendChild(list);
-  
       for (const file of curFiles) {
-        //const listItem = document.createElement("li");
-        //const para = document.createElement("p");
         if (checkCount() > 5){
           return;
         } 
         if (validFileType(file)) {
+          count = count + 1;
           //para.textContent = `File name ${file.name}, file size ${returnFileSize(
            // file.size,
           //)}.`; Имя и размер файла
           
-          count = 1;
+          
           if(screen.width <= 1240){
 
             row = document.createElement("div");
@@ -128,23 +120,14 @@ function updateImageDisplay() {
             trashimg.setAttribute("onclick", "removeRow(id)");
             wrapTrash.appendChild(trashimg);
           }
-          count++;
+          files.push(file);
           preview.appendChild(row);
-          //const image = document.createElement("img");
-          //image.style.width = "40%";
-
-          //image.src = URL.createObjectURL(file);
-  
-          //listItem.appendChild(image);
-          //listItem.appendChild(para);
-        } else {
+        } 
+        else {
           para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
           listItem.appendChild(para);
         }
-  
-        
       }
-      
     }
   }
   
@@ -163,18 +146,21 @@ function updateImageDisplay() {
   }
 
   function checkCount(){
-    count = preview.childElementCount;
+    childrens = preview.childElementCount;
     if(files.length == 0){
       document.querySelector('.outer').style.display = "block";
     }
     else{
       document.querySelector('.outer').style.display = "none";
     }
-    return count;
+    return childrens;
   }
 
   function removeRow(id){
     id = id.replace("_", "");
     preview.removeChild(document.getElementById(id));
+    //files.splice(Number(id) - 1);
+    delete files[Number(id) - 1];
+    console.log(files);
     checkCount();
   }
