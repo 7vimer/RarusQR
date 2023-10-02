@@ -147,7 +147,7 @@ function updateImageDisplay() {
 
   function checkCount(){
     childrens = preview.childElementCount;
-    if(files.length == 0){
+    if(preview.children.length == 1){
       document.querySelector('.outer').style.display = "block";
     }
     else{
