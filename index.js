@@ -21,13 +21,13 @@ function updateImageDisplay() {
       //para.textContent = "No files currently selected for upload";
       //preview.appendChild(para);
     }
-    else if (checkCount() == 6){
+    else if (checkCount() == 5){
       return;  
     }
     else {
       
       for (const file of curFiles) {
-        if (checkCount() > 5){
+        if (checkCount() > 4){
           return;
         } 
         if (validFileType(file)) {
@@ -41,7 +41,7 @@ function updateImageDisplay() {
 
             row = document.createElement("div");
             row.classList.add("row");
-            row.style = "margin-bottom: 6px;";
+            row.style = "margin-bottom: 6px; margin-top: 0; margin-right: 0; margin-left: 0;";
             row.id = String(count);
 
             foo = document.createElement("div");
