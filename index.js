@@ -44,7 +44,7 @@ function updateImageDisplay() {
            // file.size,
           //)}.`; Имя и размер файла
           
-          count = 0;
+          count = 1;
           if(screen.width <= 1240){
 
             row = document.createElement("div");
