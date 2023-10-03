@@ -165,3 +165,44 @@ function updateImageDisplay() {
     console.log(files);
     checkCount();
   }
+
+
+function addSelectionOptions(dataJson) {
+  createSelectionLineBulding(dataJson.Builds);
+  createSelectionLineRoom(dataJson.Rooms);
+  createSelectionLineExercise(dataJson.ServiceTypes);
+}
+
+function createSelectionLineBulding(building) {
+  let divBuld = document.getElementById('building');
+  for (i in building) {
+    let option = document.createElement("option");
+    option.value = building[i].name;
+    option.id =  building[i].guid;
+    option.innerHTML = building[i].name;
+    divBuld.append(option);
+  }
+   
+}
+
+function createSelectionLineRoom(room) {
+  let divRoom = document.getElementById('room');
+  for (i in room) {
+    let option = document.createElement("option");
+    option.value = room[i].name;
+    option.id =  room[i].guid;
+    option.innerHTML = room[i].name;
+    divRoom.append(option);
+  }
+}
+
+function createSelectionLineExercise(exercise) {
+  let divExercise = document.getElementById('exercise');
+  for (i in exercise) {
+    let option = document.createElement("option");
+    option.value = exercise[i].name;
+    option.id =  exercise[i].guid;
+    option.innerHTML = exercise[i].name;
+    divExercise.append(option);
+  }
+}
