@@ -168,41 +168,38 @@ function updateImageDisplay() {
 
 
 function addSelectionOptions(dataJson) {
-  createSelectionLineBulding(dataJson.Builds);
-  createSelectionLineRoom(dataJson.Rooms);
-  createSelectionLineExercise(dataJson.ServiceTypes);
+  createSelection(dataJson.Builds, 'building');
+  createSelection(dataJson.Rooms, 'room');
+  createSelection(dataJson.ServiceTypes), 'exercise';
 }
 
-function createSelectionLineBulding(building) {
-  let divBuld = document.getElementById('building');
-  for (i in building) {
+function createSelection(json, selectId) {
+  let select = document.getElementById(selectId);
+  for (i in json) {
     let option = document.createElement("option");
-    option.value = building[i].name;
-    option.id =  building[i].guid;
-    option.innerHTML = building[i].name;
-    divBuld.append(option);
+    option.value = json[i].guid;
+    option.id =  json[i].guid;
+    option.innerHTML = json[i].name;
+    if (room.length == 1) {
+      option.selected = "selected";
+      select.disabled = true;
+    }
+    select.append(option);
   }
    
 }
 
-function createSelectionLineRoom(room) {
-  let divRoom = document.getElementById('room');
-  for (i in room) {
-    let option = document.createElement("option");
-    option.value = room[i].name;
-    option.id =  room[i].guid;
-    option.innerHTML = room[i].name;
-    divRoom.append(option);
-  }
-}
+function sendApplication() {
+  let form = document.forms['application'];
+  let formCont = document.forms['contact'];
+  let body = {
+    Build: form[0].value,
+    Room: form[1].value,
+    ServiceType: form[2].value,
+    Comment: form[3].value,
+    FIO: formCont[0].value,
+    Contact: formCont[1].value
+  }  
 
-function createSelectionLineExercise(exercise) {
-  let divExercise = document.getElementById('exercise');
-  for (i in exercise) {
-    let option = document.createElement("option");
-    option.value = exercise[i].name;
-    option.id =  exercise[i].guid;
-    option.innerHTML = exercise[i].name;
-    divExercise.append(option);
-  }
+  //postApplication(body);
 }

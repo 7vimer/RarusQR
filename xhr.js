@@ -20,8 +20,9 @@ let option = document.createElement("option");
 option.value = data.room;
 option.id = data.room;
 option.innerHTML = data.room;
+option.selected = "selected";
 divRoom.append(option);
-
+divRoom.disabled = true;
 
 function CheckConnection(method, url, body = null) {
     return new Promise((resolve, reject) => {
@@ -51,10 +52,19 @@ function CheckConnection(method, url, body = null) {
 }
 
 function GetList() {
-    url = RequstURL + `?building=${data.building}&room=${data.room}&exercise=${data.exercise}`
+    url = RequstURL + `?building=${data.building}&room=${data.room}&exercise=${data.exercise}`;
     CheckConnection('GET', url)
         .then(function (response) {
             addSelectionOptions(response);
+        })
+        .catch(err => console.log(err));
+}
+
+function postApplication(body) {
+    url = RequstURL + 'sendRequest';
+    CheckConnection('GET', url, body)
+        .then(function (response) {
+            console.log(response.status);
         })
         .catch(err => console.log(err));
 }
