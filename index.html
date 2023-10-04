@@ -70,6 +70,7 @@
                                     <label class="form-label visually-hidden" for="room">Помещение</label>
                                     <select id="room" name="room" class="form-select-choice choice" required="">
                                         <option value="" disabled selected>Помещение</option>
+                                        <option value="Работа">Тест</option>
                                     </select>
                                 </div>
                                 <div class="col-md-1"></div>
@@ -229,6 +230,25 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modalGratitude" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content blockPush" style="background-color: #ffffff;  border-radius: 20px;">
+                <div class="row" style="margin-top: 0;  margin-right: 0; height: 40vh;" id="clue">
+                    <div class="col-12">
+                        <div class="outer" style="text-align: center;">
+                            <div class="clueFile" id="gratitude">
+                                <div class="gratitude">Спасибо</div>
+                                <div class="gratitudeText">Ваша заявка была отправлена.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="index.js"></script>
     <script src="xhr.js"></script>
     <script src="app.js"></script>

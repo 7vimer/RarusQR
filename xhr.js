@@ -3,9 +3,9 @@ const RequstURL = 'https://rarus-dfis.corp.rarus-cloud.ru/rarusQR/hs/api/'
 let queryString = window.location.search;
 //queryString = 'https://rarus-dfis.corp.rarus-cloud.ru/rarusQR/hs/api/?&building=11&room=11&exercise=11'
 const urlParams = new URLSearchParams(queryString);
-const building = urlParams.get('building');
-const room = urlParams.get('room');
-const exercise = urlParams.get('exercise');
+const building = urlParams.get('building').split('_');
+const room = urlParams.get('room').split('_');
+const exercise = urlParams.get('exercise').split('_');
 
 const data = {
     "building": building,
@@ -64,7 +64,22 @@ function postApplication(body) {
     url = RequstURL + 'sendRequest';
     CheckConnection('GET', url, body)
         .then(function (response) {
-            console.log(response.status);
+            if (body.Contact == '') {
+                if (document.getElementById("additionallyGratitude") !== null) {
+                    document.getElementById("additionallyGratitude").remove();
+                }
+            } else {
+                let div = document.getElementById('gratitude');
+                if (document.getElementById("additionallyGratitude") == null) {
+                    let additionally = document.createElement('div');
+                    additionally.className = 'gratitudeText';
+                    additionally.id = 'additionallyGratitude';
+                    additionally.innerHTML = 'Отслеживать состояние заявки Вы можете на.';
+                    div.append(additionally);
+                }
+            }
+            const modal = new bootstrap.Modal(document.querySelector('#modalGratitude'));
+            modal.show();
         })
         .catch(err => console.log(err));
 }

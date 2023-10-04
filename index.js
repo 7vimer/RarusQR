@@ -200,6 +200,5 @@ function sendApplication() {
     FIO: formCont[0].value,
     Contact: formCont[1].value
   }  
-
   //postApplication(body);
 }
